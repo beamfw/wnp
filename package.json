@@ -1,0 +1,71 @@
+{
+  "name": "@beamfw/wnp",
+  "version": "0.1.0-beta.2",
+  "description": "Web Node Protocol (WNP) — Consent-Based Content Exchange & AI Attribution for the Open Web",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "wnp": "./dist/cli/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./express": {
+      "types": "./dist/middleware/express.d.ts",
+      "import": "./dist/middleware/express.js",
+      "default": "./dist/middleware/express.js"
+    },
+    "./nextjs": {
+      "types": "./dist/middleware/nextjs.d.ts",
+      "import": "./dist/middleware/nextjs.js",
+      "default": "./dist/middleware/nextjs.js"
+    },
+    "./fastify": {
+      "types": "./dist/middleware/fastify.d.ts",
+      "import": "./dist/middleware/fastify.js",
+      "default": "./dist/middleware/fastify.js"
+    },
+    "./hono": {
+      "types": "./dist/middleware/hono.d.ts",
+      "import": "./dist/middleware/hono.js",
+      "default": "./dist/middleware/hono.js"
+    },
+    "./cloudflare": {
+      "types": "./dist/middleware/cloudflare.d.ts",
+      "import": "./dist/middleware/cloudflare.js",
+      "default": "./dist/middleware/cloudflare.js"
+    },
+    "./vercel": {
+      "types": "./dist/middleware/vercel.d.ts",
+      "import": "./dist/middleware/vercel.js",
+      "default": "./dist/middleware/vercel.js"
+    },
+    "./netlify": {
+      "types": "./dist/middleware/netlify.d.ts",
+      "import": "./dist/middleware/netlify.js",
+      "default": "./dist/middleware/netlify.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "clean": "rimraf dist",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.2",
+    "vitepress": "^1.6.4",
+    "vitest": "^0.34.3"
+  },
+  "author": "Web Node Protocol Contributors <wnp@webnodeprotocol.org>",
+  "license": "MIT"
+}
